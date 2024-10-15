@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Parking Management System Login</title>
+  <link rel="stylesheet" href="login.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootswatch@4.5.2/dist/cyborg/bootstrap.min.css" integrity="sha384-nEnU7Ae+3lD52AK+RGNzgieBWMnEfgTbRHIwEvp1XXPdqdO6uLTd/NwXbzboqjc2" crossorigin="anonymous">
+  <script src="https://kit.fontawesome.com/f292f18ca0.js" crossorigin="anonymous"></script>
+  <style>
+.card-header{
+    text-align: center;
+}
+.title-name{
+  margin-left: 20%;
+  margin-top: 1%;
+  color: white;
+}
+hr{
+  margin-left: 20%;
+  margin-right: 20%;
+  background-color: white;
+}
+  </style>
+</head>
+<body>
+  <div class="title-name"><i class="fa-solid fa-car-side" style="color:blue"></i> <span id="title-letter">S</span>imple Parking Management System</div><hr>
+
+  <div class="container">
+    <div class="row justify-content-center">
+      <div class="col-md-6">
+        <div class="card mt-5">
+          <div class="card-header"><i class="fa-solid fa-right-to-bracket"></i> Admin Login</div>
+          <div class="card-body">
+            <form id="login-form">
+              <div class="form-group">
+                <label for="username">Username</label>
+                <input type="text" class="form-control" id="username" placeholder="Enter username">
+              </div>
+              <div class="form-group">
+                <label for="password">Password</label>
+                <input type="password" class="form-control" id="password" placeholder="Enter password">
+              </div>
+              <button type="submit" class="btn btn-primary">Login</button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js" integrity="sha384-eMNCOe7tC1doHpGoJtKv1fQkF6CA1e7T2nsCyBC3tBBA96D9wRQfZRGjrDA4DeWk" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
+  <script>
+    document.getElementById('login-form').addEventListener('submit', function(event) {
+    event.preventDefault();
+  
+    const username = document.getElementById('username').value;
+    const password = document.getElementById('password').value;
+  
+    
+    if (username === password) {
+    
+      window.location.href = 'Dashboard.html';
+    } else {
+      alert('Invalid username or password');
+    }
+  });
+  </script>
+</body>
+</html>

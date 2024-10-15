@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vehicle Entry</title>
+    <link rel="stylesheet" href="Dashboard.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" integrity="sha512-N1sIcK7mYPQzTu+J2W8fgFvpwtoC9lWzvG+5QnB/6bKBv1JG5JjcoA+EM3sP9Cn5w14+nC4MIy9ghN2SqiPvgQ==" crossorigin="anonymous" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
+    <script src="https://kit.fontawesome.com/f292f18ca0.js" crossorigin="anonymous"></script>
+    <style>
+      .des6{
+            width:25px;
+            background-color: rgb(104, 179, 18);
+            border-color: 2px solid rgb(104, 179, 18)
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar text-bg-dark text-white">
+        <div class="container-fluid">
+          <span class="navbar-brand mb-0 text-white"><span class="material-symbols-outlined">
+            directions_car</span>SPMS Panel</span>
+          <div class="navbar-text float-end">
+            <span class="material-symbols-outlined text-white">
+                account_circle
+                </span>
+            <span class="text-white">Welcome, Administrator</span>
+            <a class="btn btn-primary" href="login.html">Logout</a>
+        </div>
+        </div> 
+      </nav>
+    <main class="d-flex flex-nowrap">
+      
+        <div class="d-flex flex-column flex-shrink-0 p-3 text-bg-dark" style="width: 280px;">
+          <ul class="nav nav-pills flex-column mb-auto">
+            <li class="nav-item">
+              <a href="Dashboard.html" class="nav-link  text-white" aria-current="page">
+                <svg class="bi pe-none me-2" width="16" height="16"><use xlink:href="#home"/></svg>
+                <i class="fa-solid fa-gauge"></i>
+                Dashboard
+              </a>
+            </li>
+            <li>
+              <a href="Dashboardcat.html" class="nav-link text-white">
+                <svg class="bi pe-none me-2" width="16" height="16"><use xlink:href="#speedometer2"/></svg>
+                <i class="fa-solid fa-table-columns"></i>
+                Category
+              </a>
+            </li>
+            <li>
+              <a href="#" class="nav-link active">
+                <svg class="bi pe-none me-2" width="16" height="16"><use xlink:href="#table"/></svg>
+                <i class="fa-solid fa-file-arrow-up"></i>
+                Vehicle Entry
+              </a>
+            </li>
+            <li>
+              <a href="DashboardManageVehi.html" class="nav-link text-white">
+                <svg class="bi pe-none me-2" width="16" height="16"><use xlink:href="#grid"/></svg>
+                <i class="fa-solid fa-list-check"></i>
+                Manage Vehicles
+              </a>
+            </li>
+            <li style="margin-left: 18px;">
+                <svg class="bi pe-none me-2" width="16" height="16"><use xlink:href="#people-circle"/></svg>
+                <i class="fa-solid fa-chart-line"></i> 
+                Reports
+            </li>
+            <li>
+              <a href="Dashboardsearch.html" class="nav-link text-white">
+                <svg class="bi pe-none me-2" width="16" height="16"><use xlink:href="#people-circle"/></svg>
+                <i class="fa-solid fa-magnifying-glass"></i>
+                Search
+              </a>
+            </li>
+            <li>
+              <a href="DashboardAccSetting.html" class="nav-link text-white">
+                <svg class="bi pe-none me-2" width="16" height="16"><use xlink:href="#people-circle"/></svg>
+                <i class="fa-solid fa-gear"></i>
+                Account Settings
+              </a>
+            </li>
+            <li>
+              <a href="login.html" class="nav-link text-white">
+                <svg class="bi pe-none me-2" width="16" height="16"><use xlink:href="#people-circle"/></svg>
+                <i class="fa-solid fa-power-off"></i> 
+                Logout
+              </a>
+            </li>
+           
+          </ul>
+        </div>
+        <div class="row">
+          <div class="col-md-5 m-3">
+              <div class="card shadow-sm bg-body-tertiary rounded" style="width: 40rem;">
+                  <div class="card-header" style="background-color: rgb(200, 200, 200);"><b><i class="fa-solid fa-address-book"></i>Add Vehicle</b></div>
+                  <div class="card-body">
+                     <form class="row g-2">
+                          <div class="col-md-6">
+                             <label class="form-label">Vehicle  Number</label>
+                             <input type="text" class="form-control" name="vehicle_number" value="">
+                          </div>
+                          <div class="col-md-6">
+                              <label class="form-label" >Vehicle Type</label>
+                              <div>
+                                  <select id="input_State" name="vehicle_type" value="{{Data.Vehicle_Type}}" class="form-select" style="width:100%;height: 35px;border-color: #ddd;">
+                                      <option selected>Select Vehicle Type </option>
+                                      <option>SUV</option>
+                                      <option>Sedan</option>
+                                      <option>Hatchback</option>
+                                      <option>Coupe</option>
+                                      <option>Convertible</option>
+                                  </select>
+                              </div>
+                          </div>
+
+                          <div class="col-12">
+                              <label for="inputAddress" class="form-label "style="margin-top: 10px">Parking Area Number</label>
+                              <div>
+                                  <select id="input_State" name="area_number" value="{{Data.Area_Number}}" class="form-select" style="width:100%;height: 35px;border-color: #ddd;">
+                                      <option selected>Select Parking Area Number </option>
+                                      <option>A</option>
+                                      <option>B</option>
+                                  </select>
+                              </div>
+                          </div>
+                          <div class="col-12">
+                              <label for="inputAddress2" class="form-label" style="margin-top: 10px">Parking Charge</label>
+                              <div>
+                                  <select id="inputState" name="parking_charges" value="{{Data.Parking_Charges}}"  class="form-select" style="width:100%;height: 35px;border-color: #ddd;">
+                                      <option selected>Select Parking Charge </option>
+                                      <option>...</option>
+                                  </select>
+                              </div>
+                          </div>
+                          <div class="col-12">
+                              <button type="submit" class="btn btn-primary"style="width:100%;margin-top: 20px;margin-bottom: 10px;">Add Vehicle</button>
+                          </div>
+                      </form>
+                  </div>
+             </div>
+          </div>
+          <div class="col">
+            <div class="card shadow-sm bg-body-tertiary rounded" style="background-color: rgb(200, 200, 200); width: 30rem; margin-left: 150px; height: 23rem; margin-top: 30px;">
+            <div class="card-header"><b><i class="fa-solid fa-arrows-up-down"></i> Vehicle Limitations</b></div>
+                <div class="card-body">
+                    <table class="table" style="border: 1px solid #ddd; margin-top: 2px;">
+                        <tr>
+                          <td>Car Limit</td>
+                          <td><input type="text" value="18" class="des6">out of 18</td>
+                       </tr>
+                       <tr>
+                          <td>Motorcycle Limit</td>
+                          <td><input type="text" value="26" class="des6">out of 26</td>
+                        </tr>
+                       <tr>
+                          <td>Mini Van Limit</td>
+                          <td><input type="text" value="8" class="des6">out of 8</td>
+                       </tr>
+                       <tr>
+                          <td>Pickup Van Limit</td>
+                          <td><input type="text" value="11" class="des6">out of 11</td>
+                       </tr>
+                       <tr>
+                          <td>Minibus Limit</td>
+                          <td><input type="text" value="6" class="des6">out of 6</td>
+                       </tr>
+                       <tr>
+                          <td>Car Type 101 Limit</td>
+                          <td><input type="text" value="5" class="des6">out of 5</td>
+                       </tr>
+                    </table>
+               </div>
+            </div>
+       </div>
+       <div class="card shadow-sm bg-body-tertiary rounded" style="width: 72rem; margin-top: 30px; margin-left: 40px;">
+        <div class="card-header" style="background-color: rgb(200, 200, 200);">
+         <b> Manage Category </b>
+        </div>
+        <div class="card-body">
+          <div style="margin-top: 10px; margin-bottom: 5px;">
+            <span>Show <input type="number" style="width:50px"> entries</span>
+             <span style="float:right;">Search <input type="text" style="width:60%"> </span>
+          </div>
+          <table class="table-bordered table table-striped">
+            <thead>
+              <tr align="center">
+                <th>#</th>
+                <th>Vehicle Number</th>
+                <th>Area Number</th>
+                <th>Arrival Time</th>
+                <th>Status</th>
+                <th>Action</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr align="center">
+                <td>36</td>
+                <td>GBN-2306</td>
+                <td>2</td>
+                <td>2024-04-15 12:00pm</td>
+                <td><button type="button" class="btn btn-primary" style="border-radius:50px;">Parked</button></td>
+                <td style="font-size:15px"><i class="fa fa-file-text"> Receipt </i>
+                </td>
+              </tr>
+            </tbody>
+            </table>
+            <div align="right">
+              <nav aria-label="Page navigation example">
+                  <ul class="pagination justify-content-end">
+                      <li class="page-item " >
+                          <a class="page-link" href="#" tabindex="-1" style="color:black">Previous</a>
+                      </li>
+                      <li class="page-item">
+                          <a class="page-link" href="#" style="background-color:blue;color:white" >1</a>
+                      </li>
+                      <li class="page-item">
+                          <a class="page-link" href="#"style="color:black">Next</a>
+                      </li>
+                  </ul>
+              </nav>
+          </div>
+     </div>
+</body>
+</html>
